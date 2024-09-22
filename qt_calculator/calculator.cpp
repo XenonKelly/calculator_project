@@ -11,15 +11,21 @@ Calculator::Calculator(QWidget *parent)
 
     this->setMaximumWidth(550);
     this->setMaximumHeight(830);
-    this->setStyleSheet("background: rgb(9, 30, 54);");
+    this->setStyleSheet("background: rgb(9, 30, 54); ");
 
     QFontDatabase::addApplicationFont(":/fonts/Calculator.ttf");
 
     move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center());
 
-    QLineEdit *display;
     display = new QLineEdit("0", this);
-    display->setStyleSheet("border-radius: 45%; padding: 5px; width: 100px; height: 80px; color: #fff; font-size: 70px; font-weight: 650;");
+    display->setStyleSheet(
+        "border-radius: 45%; "
+        "padding: 5px; "
+        "width: 100px; "
+        "height: 80px; "
+        "color: #fff; "
+        "font-size: 70px; "
+        "font-weight: 650; ");
     display->setReadOnly(true);
     display->setAlignment(Qt::AlignRight);
     display->setFont(QFont("Calculator"));
@@ -73,27 +79,207 @@ Calculator::Calculator(QWidget *parent)
 
     setLayout(gridLayout);
 
-    btn7->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn8->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn9->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn6->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn5->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn4->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn3->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn2->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn1->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 20px; font-weight: 700");
-    btn_minus->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_plus->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_multiply->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_divide->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_procent->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_clear->setStyleSheet(" border-radius: 43%; background: rgb(255, 198, 67); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 25px; font-weight: 620");
-    btn_delete->setStyleSheet(" border-radius: 43%; background: rgb(255, 198, 67); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 25px; font-weight: 620");
-    btn_equal->setStyleSheet(" border-radius: 43%; background: rgb(231,187,103); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn_dot->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 84px; height: 84px; font-size: 30px; font-weight: 700");
-    btn0->setStyleSheet(" border-radius: 43%; background: rgb(87, 92, 130); color: #fff; padding: 1px; text-align: center; width: 100px; height: 84px; font-size: 20px; font-weight: 700");
+    btn7->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn8->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn9->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn6->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn5->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn4->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn3->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn2->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn1->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
+    btn_minus->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_plus->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_multiply->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_divide->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_procent->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_clear->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(255, 198, 67); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 25px; "
+        "font-weight: 620; ");
+    btn_delete->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(255, 198, 67); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 25px; "
+        "font-weight: 620; ");
+    btn_equal->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(231,187,103); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn_dot->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 84px; "
+        "height: 84px; "
+        "font-size: 30px; "
+        "font-weight: 700; ");
+    btn0->setStyleSheet(
+        "border-radius: 43%; "
+        "background: rgb(87, 92, 130); "
+        "color: #fff; "
+        "padding: 1px; "
+        "text-align: center; "
+        "width: 100px; "
+        "height: 84px; "
+        "font-size: 20px; "
+        "font-weight: 700; ");
 
-    //connect(btn7, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn9, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn8, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn7, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn6, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn5, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn4, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn3, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn2, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn1, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn0, &QPushButton::clicked, this, &Calculator::digit_clicked);
+    connect(btn_dot, &QPushButton::clicked, this, &Calculator::digit_clicked);
 }
 
 Calculator::~Calculator() {
@@ -105,10 +291,10 @@ void Calculator::button_slot() {
 }
 
 void Calculator::digit_clicked() {
-   /* QPushButton *btn = (QPushButton*)(sender()); ---на этом этапе программа аварийно завершается
+    QPushButton *btn = (QPushButton*)(sender());
     int digit = btn->text().toInt();
     if (display->text() == "0") {
         display->clear();
     }
-    display->setText(display->text() + QString::number(digit));*/
+    display->setText(display->text() + QString::number(digit));
 }
